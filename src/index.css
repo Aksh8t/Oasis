@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- 🌿 Global Body Style --- */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9FAFB; /* gray-50 */
+  color: #1F2937; /* gray-800 */
+}
+
+/* --- 🌿 Animation Keyframes --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 🌿 Animation Utilities --- */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out both;
+}
+
+/* --- 🌿 Delay Variants --- */
+.animate-slide-up-delay-1 {
+  animation: slideUp 0.8s ease-in-out 0.2s both;
+}
+.animate-slide-up-delay-2 {
+  animation: slideUp 0.8s ease-in-out 0.4s both;
+}
+.animate-slide-up-delay-3 {
+  animation: slideUp 0.8s ease-in-out 0.6s both;
+}
+.animate-slide-up-delay-4 {
+  animation: slideUp 0.8s ease-in-out 0.8s both;
+}
+
+/* --- 🌿 Scrollbar Customization (for Chatbot) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F4F6; /* gray-100 */
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #A7F3D0; /* emerald-200 */
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6EE7B7; /* emerald-300 */
+}
+
+/* --- 🌿 Card Shadow Hover Utility --- */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.container {
+  @apply max-w-7xl mx-auto px-6 lg:px-10;
+}
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+.glow-badge {
+  animation: pulse-glow 2s infinite;
+}
